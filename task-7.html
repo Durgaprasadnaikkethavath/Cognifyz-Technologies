@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cognifyz Technologies - Interactive Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./task-7.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"> Cognifyz Technologies </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#updates">Updates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold">Welcome to Cognifyz</h1>
+
+        <p class="lead">Where Data Meets Intelligence</p>
+
+        <p>Learn, explore, and build your skills with modern technologies.</p>
+
+        <button id="colorButton" class="btn btn-primary btn-lg">
+          Change Background Color
+        </button>
+
+        <p id="message" class="mt-3 fw-semibold"></p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-md-6">
+            <img
+              src="./Img/img.jpg"
+              class="img-fluid rounded shadow"
+              alt="Developer working on a computer"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <h2 class="fw-bold mb-3">About Cognifyz</h2>
+
+            <p>
+              Cognifyz Technologies focuses on technology, innovation, and
+              practical learning experiences.
+            </p>
+
+            <p>
+              Our goal is to help learners improve their technical knowledge
+              through hands-on projects and real-world development tasks.
+            </p>
+
+            <a href="#services" class="btn btn-outline-primary">
+              Explore Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Our Services</h2>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card service-card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h4 class="card-title">Web Development</h4>
+
+                <p class="card-text">
+                  Build responsive and interactive websites using modern web
+                  technologies.
+                </p>
+
+                <a href="#contact" class="btn btn-primary"> Learn More </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card service-card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h4 class="card-title">Frontend Development</h4>
+
+                <p class="card-text">
+                  Create user-friendly interfaces using HTML, CSS, JavaScript,
+                  and Bootstrap.
+                </p>
+
+                <a href="#contact" class="btn btn-primary"> Learn More </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card service-card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <h4 class="card-title">Technology Learning</h4>
+
+                <p class="card-text">
+                  Improve your technical skills through practical projects and
+                  activities.
+                </p>
+
+                <a href="#contact" class="btn btn-primary"> Learn More </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- API Integration Section -->
+    <section id="updates" class="py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-3">Latest Updates</h2>
+
+        <p class="text-center text-muted mb-4">
+          Posts loaded dynamically using an external API.
+        </p>
+
+        <p id="loading" class="text-primary text-center">Loading posts...</p>
+
+        <p id="error" class="text-danger text-center"></p>
+
+        <div id="posts-container" class="row g-4"></div>
+
+        <div class="text-center mt-4">
+          <button id="loadMoreBtn" class="btn btn-primary">
+            Load More Posts
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-4">Registration Form</h2>
+
+        <div class="form-container mx-auto bg-white p-4 rounded shadow">
+          <form id="registrationForm" novalidate>
+            <!-- Name -->
+            <div class="mb-3">
+              <label for="name" class="form-label"> Full Name </label>
+
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Enter your full name"
+              />
+
+              <small id="nameError" class="error text-danger"></small>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label"> Email Address </label>
+
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+              />
+
+              <small id="emailError" class="error text-danger"></small>
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label for="phone" class="form-label"> Phone Number </label>
+
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                placeholder="Enter 10-digit phone number"
+              />
+
+              <small id="phoneError" class="error text-danger"></small>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label"> Password </label>
+
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="Enter password"
+              />
+
+              <small id="passwordError" class="error text-danger"></small>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">
+                Confirm Password
+              </label>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                class="form-control"
+                placeholder="Confirm password"
+              />
+
+              <small
+                id="confirmPasswordError"
+                class="error text-danger"
+              ></small>
+            </div>
+
+            <!-- Gender -->
+            <div class="mb-3">
+              <label for="gender" class="form-label"> Gender </label>
+
+              <select id="gender" class="form-select">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <small id="genderError" class="error text-danger"></small>
+            </div>
+
+            <!-- Terms -->
+            <div class="mb-3 form-check">
+              <input type="checkbox" id="terms" class="form-check-input" />
+
+              <label for="terms" class="form-check-label">
+                I agree to the terms and conditions
+              </label>
+
+              <br />
+
+              <small id="termsError" class="error text-danger"></small>
+            </div>
+
+            <!-- Success Message -->
+            <p id="successMessage" class="text-success fw-bold"></p>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary w-100">
+              Register Now
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p class="mb-1">&copy; 2026 Cognifyz Technologies</p>
+
+        <p class="mb-0">Where Data Meets Intelligence</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="./task-7.js"></script>
+  </body>
+</html>

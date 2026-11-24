@@ -1,0 +1,243 @@
+/* =====================================
+   COGNIFYZ - BOOTSTRAP CUSTOM STYLING
+===================================== */
+
+/* General Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  transition: background-color 0.5s ease;
+}
+
+/* Navbar */
+
+.navbar {
+  padding: 16px 0;
+}
+
+.navbar-brand {
+  font-size: 23px;
+}
+
+.nav-link {
+  margin-left: 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: #facc15 !important;
+}
+
+/* Hero Section */
+
+.hero-section {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+  padding: 100px 20px;
+  transition: background-color 0.5s ease;
+}
+
+.hero-section h1 {
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Interactive Button */
+
+#colorButton {
+  margin-top: 25px;
+  padding: 13px 28px;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+#colorButton:hover {
+  transform: translateY(-3px);
+}
+
+/* Section Titles */
+
+.section-title {
+  color: #1e3a8a;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+
+#about img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+}
+
+/* Services Cards */
+
+.service-card {
+  border: none;
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+.service-card .card-title {
+  color: #2563eb;
+}
+
+/* API Section */
+
+#posts-container .post-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+#posts-container .post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-id {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.post-card h3 {
+  font-size: 19px;
+  color: #2563eb;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.post-card p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Registration Form */
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 12px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control,
+.form-select {
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+/* Validation Messages */
+
+.error {
+  display: block;
+  color: #dc2626;
+  font-size: 13px;
+  margin-top: 5px;
+  min-height: 15px;
+}
+
+/* Footer */
+
+.footer {
+  line-height: 1.8;
+}
+
+/* Tablet Responsive */
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 70px 20px;
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 480px) {
+  .hero-section {
+    padding: 55px 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 29px;
+  }
+
+  .hero-section h3 {
+    font-size: 19px;
+  }
+
+  .hero-section p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .form-container {
+    padding: 22px !important;
+  }
+
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .footer {
+    font-size: 13px;
+  }
+}

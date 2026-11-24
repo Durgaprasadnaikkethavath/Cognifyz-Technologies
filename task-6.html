@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cognifyz Technologies - Form Styling and Validation</title>
+    <link rel="stylesheet" href="./task-6.css" />
+  </head>
+  <body>
+    <!-- Registration Form Section -->
+
+    <section class="form-section" id="contact">
+      <div class="form-container">
+        <h2>Registration Form</h2>
+
+        <p class="form-description">
+          Join Cognifyz Technologies. Please enter your details below.
+        </p>
+
+        <form id="registrationForm" novalidate>
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="name">Full Name</label>
+
+            <input type="text" id="name" placeholder="Enter your full name" />
+
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address</label>
+
+            <input type="email" id="email" placeholder="Enter your email" />
+
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter 10-digit phone number"
+            />
+
+            <small class="error" id="phoneError"></small>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password</label>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+            />
+
+            <small class="error" id="passwordError"></small>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label for="confirmPassword"> Confirm Password </label>
+
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm your password"
+            />
+
+            <small class="error" id="confirmPasswordError"></small>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group">
+            <label for="gender">Gender</label>
+
+            <select id="gender">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+
+            <small class="error" id="genderError"></small>
+          </div>
+
+          <!-- Terms and Conditions -->
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" />
+
+            <label for="terms"> I agree to the Terms and Conditions </label>
+          </div>
+
+          <small class="error" id="termsError"></small>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn">Register Now</button>
+
+          <!-- Success Message -->
+          <p id="successMessage"></p>
+        </form>
+      </div>
+    </section>
+    <script src="./task-6.js"></script>
+  </body>
+</html>

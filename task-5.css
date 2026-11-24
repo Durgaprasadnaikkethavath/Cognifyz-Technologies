@@ -1,0 +1,133 @@
+/* ===== API Integration Section ===== */
+
+.api-section {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f4f7fc;
+}
+
+.api-section h2 {
+  color: #1e3a8a;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.api-description {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Posts Container */
+
+.posts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Post Card */
+
+.post-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card h3 {
+  color: #2563eb;
+  font-size: 19px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.post-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Post ID */
+
+.post-id {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+/* Loading and Error */
+
+#loading {
+  color: #2563eb;
+  font-size: 17px;
+  margin: 20px;
+}
+
+#error {
+  color: red;
+  margin: 15px;
+}
+
+/* Load More Button */
+
+#loadMoreBtn {
+  background-color: #2563eb;
+  color: white;
+  padding: 13px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 0.3s;
+}
+
+#loadMoreBtn:hover {
+  background-color: #1e3a8a;
+}
+
+/* Tablet Responsive */
+
+@media screen and (max-width: 768px) {
+  .posts-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .api-section h2 {
+    font-size: 26px;
+  }
+}
+
+/* Mobile Responsive */
+
+@media screen and (max-width: 480px) {
+  .posts-container {
+    grid-template-columns: 1fr;
+  }
+
+  .api-section {
+    padding: 35px 15px;
+  }
+
+  .api-section h2 {
+    font-size: 23px;
+  }
+
+  .post-card {
+    padding: 20px;
+  }
+}
